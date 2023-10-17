@@ -33,8 +33,10 @@ public class App
 
 				int opcion_seleccionada = Integer.parseInt(input("Por favor seleccione una opción"));
 				
-                
                 if (opcion_seleccionada == 1)
+                String login = input("Ingrese su login");
+                String contraseña = input("Ingrese su contraseña");
+                boolean verificar = Empresa.validarCedencialesAdmin(login, contraseña);
                 {
                     System.out.println("Entrando en categoria...");
 					continuar = false;
@@ -82,7 +84,7 @@ public class App
     
 
         while (continuar_menu_administrador_G)
-		{
+		{   
 			try
 			{
                 
