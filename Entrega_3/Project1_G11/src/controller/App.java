@@ -94,21 +94,15 @@ public class App
                 
                 System.out.println("\nBIENVENIDO ADMINISTRADOR GENERAL. Por favor seleccione una de las siguientes opciones");
 
-                System.out.println("1. Ingresar al sistema");
-                System.out.println("2. Gestionar inventario de vehiculos (Agregar)");
-                System.out.println("3. Gestionar el estado de un vehiculo");
-                System.out.println("4. Eliminar vehiculo del inventario");
-                System.out.println("5. Gestionar sedes");
+                System.out.println("1. Gestionar inventario de vehiculos (Agregar)");
+                System.out.println("2. Gestionar el estado de un vehiculo");
+                System.out.println("3. Eliminar vehiculo del inventario");
+                System.out.println("4. Gestionar sedes");
                 System.out.println("0. Salir de la aplicacion");
 
                 int opcion_seleccionada = Integer.parseInt(input("Por favor seleccione una opción"));
+        
                 if (opcion_seleccionada == 1)
-                {
-
-                }
-
-
-                else if (opcion_seleccionada == 2)
                 {
                     String placa = input("Ingrese la placa del vehiculo\n");
                     String marca = input("Ingrese la marca del vehiculo\n");
@@ -121,15 +115,23 @@ public class App
                     int size = Integer.parseInt(input("Ingrese el tamaño del vehiculo\n"));
 
                     System.out.println("Datos recibidos...");
-
-
                 }
 
 
+                else if (opcion_seleccionada == 2)
+                
+                {
+                    String placa = input("Ingrese la placa del vehiculo\n");
+                }
+
                 else if (opcion_seleccionada == 3)
                 {
-                    System.out.println("Saliendo de la aplicación ....");
-					continuar_menu_administrador_G = false;  
+                    String placa = input("Ingrese la placa del vehiculo\n");
+                }
+
+                else if (opcion_seleccionada == 4)
+                {
+                    
                 }
 
 
@@ -161,9 +163,8 @@ public class App
                 
                 System.out.println("\nBIENVENIDO ADMINISTRADOR LOCAL. Por favor seleccione una de las siguientes opciones");
 
-                System.out.println("1. Ingresar al sistema");
-                System.out.println("2. Modificar informacion empleados");
-                System.out.println("3. Crear usuario para empleado");
+                System.out.println("1. Modificar informacion empleados");
+                System.out.println("2. Crear usuario para empleado");
                 System.out.println("0. Salir de la aplicacion");
 
                 int opcion_seleccionada = Integer.parseInt(input("Por favor seleccione una opción"));
@@ -174,16 +175,13 @@ public class App
 
                 else if (opcion_seleccionada == 2)
                 {
-                    
+                    String Nombres = input("Ingrese los nombres del empleado");
+                    String Apellidos = input("Ingrese los apellidos del empleado"); 
+                    String Usuario = input("Ingrese el usuario para registrar al empleado al sistema");
+                    String Contraseña = input("Ingrese la contraseña para el usuario del empleado");
                 }
 
-                else if (opcion_seleccionada == 3)
-                {
-                    
-                }
-
-
-
+            
                 else if (opcion_seleccionada == 0)
                 {
                     System.out.println("Saliendo de la aplicación ....");
@@ -211,10 +209,9 @@ public class App
             {
                 System.out.println("\nBIENVENIDO EMPLEADO. Por favor seleccione una de las siguientes opciones");
 
-                System.out.println("1. Ingresar al sistema");
-                System.out.println("2. Consultar inventario de vehiculos");
-                System.out.println("3. Realizar reserva por cliente");
-                System.out.println("4. Reportar mantenimiento de vehiculo");
+                System.out.println("1. Consultar inventario de vehiculos");
+                System.out.println("2. Realizar reserva por cliente");
+                System.out.println("3. Reportar mantenimiento de vehiculo");
                 System.out.println("0. Salir de la aplicacion");
                 int opcion_seleccionada = Integer.parseInt(input("Por favor seleccione una opción"));
 
@@ -233,10 +230,6 @@ public class App
                     
                 }
 
-                else if (opcion_seleccionada == 4)
-                {
-                    
-                }
 
                 else if (opcion_seleccionada == 0)
                 {
@@ -280,15 +273,17 @@ public class App
 
                 if (opcion_seleccionada == 1)
                 {
-                    String Nombres = input("Ingrese la placa del vehiculo\n");
-                    String Apellidos = input("Ingrese la marca del vehiculo\n");
-                    String Contacto = input("Ingrese el color del vehiculo\n");
-                    String transmision = input("Ingrese la transmision del vehiculo\n");
-                    String categoria = input("Ingrese la categoria del vehiculo\n");
-                    int capacidad = Integer.parseInt(input("Ingrese la capcaidad del vehiculo\n"));
-                    boolean estado = Boolean.parseBoolean(input("Ingrese el estado del vehiculo\n"));
-                    boolean disponible = Boolean.parseBoolean(input("Ingrese la disponibilidad del vehiculo\n"));
-                    int size = Integer.parseInt(input("Ingrese el tamaño del vehiculo\n"));
+                    String Nombres = input("Ingrese nombres");
+                    String Apellidos = input("Ingrese apellidos");
+                    int Contacto = Integer.parseInt(input("Ingrese numero de telefono"));
+                    String Licencia = input("Confirme licencia");
+                    String MetodoPago = input("Confirme metodo de pago");
+                    String Usuario = input("Ingrese el usuario para registrarse en el sistema");
+                    String Contraseña = input("Ingrese la contraseña para registrarse en el sistema");
+                    String Nacimiento = input("Ingrese su fecha de nacimiento");
+                    String Nacionalidad = input("Ingrese su nacionalidad\n");
+                    int Documento = Integer.parseInt(input("Ingrese su documento de identidad\n"));  
+                    String Email = input("Ingrese su correo electronico\n");      
                 }
 
                 else if (opcion_seleccionada == 2)
@@ -296,9 +291,17 @@ public class App
                     mostrarMenu_C();   
                 }
 
+
                 else if (opcion_seleccionada == 3)
                 {
-                     
+                     String Categoria = input("Ingrese la placa del vehiculo\n");
+                     String fechaEntrega = input("Ingrese la placa del vehiculo\n");
+                     String fechaDevoculucion = input("Ingrese la placa del vehiculo\n");
+                     String Temporada = input("Ingrese la placa del vehiculo\n");
+                     String metodoPago = input("Ingrese la placa del vehiculo\n");
+                     String Seguro = input("Ingrese la placa del vehiculo\n");
+                     String conductorAdicional = input("Ingrese la placa del vehiculo\n");
+                     String Sede = input("Ingrese la placa del vehiculo\n");
                 }
 
                 else if (opcion_seleccionada == 4)
@@ -375,11 +378,24 @@ public class App
     public void mostrarMenu_C()
 	
     {
-        System.out.println("\n INFORMACION IMPORTANTE PARA LA RESERVA Y ALQUILER DE VEHICULOS");
-        System.out.println("2. Ingresar al sistema");
-        System.out.println("3. Mostrar el menu");
-        System.out.println("4. Realizar una Reserva");
-        System.out.println("5. Confirmar la reserva y guardar la factura");
+        System.out.println("\n INFORMACION IMPORTANTE PARA LA RESERVA Y ALQUILER DE VEHICULOS \n");
+        
+        System.out.println("------ SEGUROS ------");
+        System.out.println("Seguro diario obligatorio -> Precio: $150,000");
+        System.out.println("1. Nivel bajo -> Precio: $170,000 ");
+        System.out.println("2. Nivel normal -> Precio: $560,000");
+        System.out.println("3. Nivel vip -> Precio: $960,000");
+
+        System.out.println("------ CONDUCTOR ADICIONAL ------");
+        System.out.println("Conductor adcional a la hora de recoger el vehiculo -> Precio: $40,000 ");
+
+        System.out.println("------ SEDE ------");
+        System.out.println("Si el vehiculo es entregada en otra sede -> Precio: $25,000 ");
+
+        System.out.println("------ Temporada ------");
+        System.out.println("Temporada Alta (mayo, junio, julio, agosto) -> Precio: $80,000 ");
+        System.out.println("Temporada Baja (enero, febrero, marzo, abril, septiembre, octubre, noviembre, diciembre) -> Precio: $55,000 ");
+
 
     }
 
