@@ -89,10 +89,11 @@ public class App
                 System.out.println("\nBIENVENIDO ADMINISTRADOR GENERAL. Por favor seleccione una de las siguientes opciones");
 
                 System.out.println("1. Ingresar al sistema");
-                System.out.println("2. Gestionar inventario de vehiculos");
+                System.out.println("2. Gestionar inventario de vehiculos (Agregar)");
                 System.out.println("3. Gestionar el estado de un vehiculo");
-                System.out.println("4. Gestionar sedes");
-                System.out.println("5. Mostrar el menu");
+                System.out.println("4. Eliminar vehiculo del inventario");
+                System.out.println("5. Gestionar sedes");
+                System.out.println("6. Mostrar el menu");
                 System.out.println("0. Salir de la aplicacion");
 
                 int opcion_seleccionada = Integer.parseInt(input("Por favor seleccione una opción"));
@@ -103,8 +104,18 @@ public class App
 
                 else if (opcion_seleccionada == 2)
                 {
-                    mostrarMenu_A_G();
+                    String placa = input("Ingrese la placa del vehiculo\n");
+                    String marca = input("Ingrese la marca del vehiculo\n");
+                    String color = input("Ingrese el color del vehiculo\n");
+                    String transmision = input("Ingrese la transmision del vehiculo\n");
+                    String categoria = input("Ingrese la categoria del vehiculo\n");
+                    String capacidad = input("Ingrese la capcaidad del vehiculo\n");
+                    String estado = input("Ingrese el estado del vehiculo\n");
+                    String disponible = input("Ingrese la disponibilidad del vehiculo\n");
+                    String tamaño = input("Ingrese el tamaño del vehiculo\n");
+
                 }
+
 
                 else if (opcion_seleccionada == 0)
                 {
@@ -326,8 +337,7 @@ public class App
     public void mostrarMenu_C()
 	
     {
-        System.out.println("\n INFORMACION IMPORTANTE PARA LA RESERVA Y ALQUILER DE VEHICULOS\n");
-        
+        System.out.println("\n INFORMACION IMPORTANTE PARA LA RESERVA Y ALQUILER DE VEHICULOS");
         System.out.println("2. Ingresar al sistema");
         System.out.println("3. Mostrar el menu");
         System.out.println("4. Realizar una Reserva");
