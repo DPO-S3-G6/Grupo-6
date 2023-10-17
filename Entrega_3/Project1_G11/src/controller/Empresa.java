@@ -14,7 +14,7 @@ public class Empresa {
 		cargarUsuarios();
 	}
 	private void cargarUsuarios() {
-		Admin administrador= new Administrador("admin1","1234");
+		Admin administrador= new Admin("admin1","1234");
 		administradores.add(administrador);
 	}
     public boolean validarCedencialesAdmin(String login,String contraseña) {
