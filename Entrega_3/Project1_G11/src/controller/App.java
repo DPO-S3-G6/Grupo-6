@@ -50,7 +50,8 @@ public class App
                     continuar_menu_administrador_G = true;
                 } 
                 else if (opcion_seleccionada == 2) {
-				
+                    String login = input("Ingrese su login");
+                    String contraseña = input("Ingrese su contraseña");
                     System.out.println("Entrando en categoria...");
 					continuar = false;
                     continuar_menu_administrador_L = true;
@@ -59,6 +60,8 @@ public class App
 
                 else if (opcion_seleccionada == 3)
                 {
+                    String login = input("Ingrese su login");
+                    String contraseña = input("Ingrese su contraseña");
                     System.out.println("Entrando en categoria...");
 					continuar = false;
                     continuar_menu_empleado = true;
@@ -66,6 +69,8 @@ public class App
 
                 else if (opcion_seleccionada == 4)
                 {
+                    String login = input("Ingrese su login");
+                    String contraseña = input("Ingrese su contraseña");
                     System.out.println("Entrando en categoria...");
 					continuar = false;
                     continuar_menu_cliente = true;
