@@ -2,7 +2,7 @@ package model;
 
 import java.io.File;
 
-public class Admin {
+public class Admin implements User {
 
     private String tipo;
 
@@ -35,6 +35,24 @@ public class Admin {
 	}
 	public String IngresoApp() { 
 		return "";
+	}
+
+	@Override
+	public String getNombreCompleto() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'getNombreCompleto'");
+	}
+
+	@Override
+	public String getLogin() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'getLogin'");
+	}
+
+	@Override
+	public String getContraseña() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'getContraseña'");
 	}
 }
 
