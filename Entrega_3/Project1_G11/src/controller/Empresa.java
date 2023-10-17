@@ -13,9 +13,13 @@ public class Empresa {
 		administradores = new ArrayList<Admin>();
 		cargarUsuarios();
 	}
-	private void cargarUsuarios() {
-		Admin administrador= new Admin("admin1","1234");
+	private List<Admin> cargarUsuarios() {
+		Admin administrador = new Admin("admin1","1234");
 		administradores.add(administrador);
+		Admin administrador2 = new Admin("admin2","1234");
+		administradores.add(administrador2);
+		System.out.println(administradores);
+		return administradores;
 	}
     public boolean validarCedencialesAdmin(String login,String contraseña) {
 		System.out.println(administradores.size());
@@ -31,6 +35,5 @@ public class Empresa {
 		}
 		return encontre;
 	}
-
 
 }

@@ -4,7 +4,10 @@ import java.io.File;
 
 public class Admin implements User {
 
-    private String tipo;
+	public String nombreCompleto;
+	public String login;
+	public String contraseña;
+	private String tipo;
 
 	public String getTipo() {
         return tipo;
@@ -39,17 +42,25 @@ public class Admin implements User {
 
 	@Override
 	public String getNombreCompleto() {
-		throw new UnsupportedOperationException("Unimplemented method 'getNombreCompleto'");
+		return nombreCompleto;
 	}
 
 	@Override
 	public String getLogin() {
-		throw new UnsupportedOperationException("Unimplemented method 'getLogin'");
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
 	}
 
 	@Override
 	public String getContraseña() {
-		throw new UnsupportedOperationException("Unimplemented method 'getContraseña'");
+		return contraseña;
+	}
+
+	    public void setContraseña(String contraseña) {
+		this.contraseña = contraseña;
 	}
 }
 

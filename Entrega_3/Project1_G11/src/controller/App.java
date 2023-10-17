@@ -29,14 +29,14 @@ public class App
                 System.out.println("2. ADMINISTRADOR LOCAL\n");
                 System.out.println("3. EMPLEADO\n");
                 System.out.println("4. CLIENTE\n");
-                System.out.println("5. Salir de la aplicacion\n");
+                System.out.println("5. SALIR DE LA APLICACION\n");
 
                 int opcion_seleccionada = Integer.parseInt(input("Por favor seleccione una opción"));
 
                 if (opcion_seleccionada == 1) {
                     String login = input("Ingrese su login");
                     String contraseña = input("Ingrese su contraseña");
-                    Empresa empresa = new Empresa();
+                    /**Empresa empresa = new Empresa();
                     boolean verificar = empresa.validarCedencialesAdmin(login, contraseña);
                     if (verificar) {
                         System.out.println("Entrando en categoria...");
@@ -44,7 +44,10 @@ public class App
                         continuar_menu_administrador_G = true;
                     } else {
                         System.out.println("Credenciales incorrectas. Por favor intente de nuevo.");
-                    }
+                    }**/
+                    System.out.println("Entrando en categoria...");
+                    continuar = false;
+                    continuar_menu_administrador_G = true;
                 } 
                 else if (opcion_seleccionada == 2) {
 				
