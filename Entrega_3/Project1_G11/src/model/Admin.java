@@ -39,19 +39,16 @@ public class Admin implements User {
 
 	@Override
 	public String getNombreCompleto() {
-		// TODO Auto-generated method stub
 		throw new UnsupportedOperationException("Unimplemented method 'getNombreCompleto'");
 	}
 
 	@Override
 	public String getLogin() {
-		// TODO Auto-generated method stub
 		throw new UnsupportedOperationException("Unimplemented method 'getLogin'");
 	}
 
 	@Override
 	public String getContraseña() {
-		// TODO Auto-generated method stub
 		throw new UnsupportedOperationException("Unimplemented method 'getContraseña'");
 	}
 }
