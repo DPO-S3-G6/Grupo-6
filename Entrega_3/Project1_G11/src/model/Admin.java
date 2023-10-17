@@ -11,7 +11,7 @@ public class Admin {
     }
 
     //constructor de la clase Admin
-    public Admin(String Tipo) {
+    public Admin(String Tipo, String string) {
 		this.tipo = Tipo;
 	}
 
