@@ -4,27 +4,37 @@ import java.io.File;
 
 public class Admin {
 
-    private String Tipo;
+    private String tipo;
 
 	public String getTipo() {
-        return Tipo;
+        return tipo;
     }
 
     //constructor de la clase Admin
     public Admin(String Tipo) {
-		this.Tipo = this.Tipo;
+		this.tipo = Tipo;
 	}
 
 	public String RegistroVeh() { 
 		return "";
 	}
 
-    public String RegistroVeh() { 
+    public String ModVeh() { 
 		return "";
 	}
     
-	public File gestionInv() { 
-		return null ;
+	public String GestionSede() { 
+		return ""; 
+	}
+	public String GestionEmple() { 
+		return ""; 
+
+	}
+	public String RegistroEmple() { 
+		return ""; 
+	}
+	public String IngresoApp() { 
+		return "";
 	}
 }
 
