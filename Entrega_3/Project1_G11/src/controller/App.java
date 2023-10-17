@@ -14,19 +14,22 @@ public class App
         System.out.println("A continuacion, se le presentara tres categorias. Por favor, seleccione la categoria que se acomoda a su rol. \n");
  
 		boolean continuar = true;
-        boolean continuar_menu_administrador = false;
+        boolean continuar_menu_administrador_G = false;
+        boolean continuar_menu_administrador_L = false;
         boolean continuar_menu_empleado = false;
         boolean continuar_menu_cliente = false;
+        
 		
         while (continuar)
 		{
 			try
 			{
 				System.out.println("\nOpciones de la aplicación\n");
-				System.out.println("1. ADMINISTRADOR\n");
-                System.out.println("2. EMPLEADO\n");
-                System.out.println("3. CLIENTE\n");
-                System.out.println("4. Salir de la aplicacion\n");
+				System.out.println("1. ADMINISTRADOR GENERAL\n");
+                System.out.println("2. ADMINISTRADOR LOCAL\n");
+                System.out.println("3. EMPLEADO\n");
+                System.out.println("4. CLIENTE\n");
+                System.out.println("5. Salir de la aplicacion\n");
 
 				int opcion_seleccionada = Integer.parseInt(input("Por favor seleccione una opción"));
 				
@@ -35,24 +38,31 @@ public class App
                 {
                     System.out.println("Entrando en categoria...");
 					continuar = false;
-                    continuar_menu_administrador = true;
+                    continuar_menu_administrador_G = true;
 				}
                 
                 else if (opcion_seleccionada == 2)
 				{
                     System.out.println("Entrando en categoria...");
 					continuar = false;
-                    continuar_menu_empleado = true;
+                    continuar_menu_administrador_L = true;
 				}
 
                 else if (opcion_seleccionada == 3)
                 {
                     System.out.println("Entrando en categoria...");
 					continuar = false;
+                    continuar_menu_empleado = true;
+				}
+
+                else if (opcion_seleccionada == 4)
+                {
+                    System.out.println("Entrando en categoria...");
+					continuar = false;
                     continuar_menu_cliente = true;
 				}
 
-				else if (opcion_seleccionada == 4)
+				else if (opcion_seleccionada == 5)
 				{
 					System.out.println("Saliendo de la aplicación ...");
 					continuar = false;
@@ -71,15 +81,18 @@ public class App
 
     
 
-        while (continuar_menu_administrador)
+        while (continuar_menu_administrador_G)
 		{
 			try
 			{
                 
-                System.out.println("\nBIENVENIDO ADMINISTRADOR. Por favor seleccione una de las siguientes opciones");
+                System.out.println("\nBIENVENIDO ADMINISTRADOR GENERAL. Por favor seleccione una de las siguientes opciones");
 
                 System.out.println("1. Ingresar al sistema");
-                System.out.println("2. Mostrar el menu");
+                System.out.println("2. Gestionar inventario de vehiculos");
+                System.out.println("3. Gestionar el estado de un vehiculo");
+                System.out.println("4. Gestionar sedes");
+                System.out.println("5. Mostrar el menu");
                 System.out.println("0. Salir de la aplicacion");
 
                 int opcion_seleccionada = Integer.parseInt(input("Por favor seleccione una opción"));
@@ -90,13 +103,13 @@ public class App
 
                 else if (opcion_seleccionada == 2)
                 {
-                    mostrarMenu_A();
+                    mostrarMenu_A_G();
                 }
 
                 else if (opcion_seleccionada == 0)
                 {
                     System.out.println("Saliendo de la aplicación ....");
-					continuar_menu_administrador = false;  
+					continuar_menu_administrador_G = false;  
                 }
                 
                 else	
@@ -114,6 +127,50 @@ public class App
 
 
 
+        while (continuar_menu_administrador_L)
+		{
+			try
+			{
+                
+                System.out.println("\nBIENVENIDO ADMINISTRADOR LOCAL. Por favor seleccione una de las siguientes opciones");
+
+                System.out.println("1. Ingresar al sistema");
+                System.out.println("2. Modificar informacion empleados");
+                System.out.println("3. Crear usuario para empleado");
+                System.out.println("4. Mostrar el menu");
+                System.out.println("0. Salir de la aplicacion");
+
+                int opcion_seleccionada = Integer.parseInt(input("Por favor seleccione una opción"));
+                if (opcion_seleccionada == 1)
+                {
+
+                }
+
+                else if (opcion_seleccionada == 2)
+                {
+                    mostrarMenu_A_L();
+                }
+
+                else if (opcion_seleccionada == 0)
+                {
+                    System.out.println("Saliendo de la aplicación ....");
+					continuar_menu_administrador_L = false;  
+                }
+                
+                else	
+				{
+					System.out.println("\nPor favor seleccione una opción válida.");
+				}
+            }
+            catch (NumberFormatException e)
+			{
+				System.out.println("Debe seleccionar uno de los números de las opciones.");
+			}
+        }
+
+
+
+
 
         while (continuar_menu_empleado)
         {
@@ -122,7 +179,10 @@ public class App
                 System.out.println("\nBIENVENIDO EMPLEADO. Por favor seleccione una de las siguientes opciones");
 
                 System.out.println("1. Ingresar al sistema");
-                System.out.println("2. Mostrar el menu");
+                System.out.println("2. Consultar inventario de vehiculos");
+                System.out.println("3. Realizar reserva por cliente");
+                System.out.println("4. Reportar mantenimiento de vehiculo");
+                System.out.println("5. Mostrar el menu");
                 System.out.println("0. Salir de la aplicacion");
                 int opcion_seleccionada = Integer.parseInt(input("Por favor seleccione una opción"));
 
@@ -168,8 +228,9 @@ public class App
                 System.out.println("1. Crear Usuario");
                 System.out.println("2. Ingresar al sistema");
                 System.out.println("3. Mostrar el menu");
-                System.out.println("4. Crear una Reserva");
+                System.out.println("4. Realizar una Reserva");
                 System.out.println("5. Confirmar la reserva y guardar la factura");
+                System.out.println("2. Añadir conductor adicional");
                 System.out.println("6. Cancelar Reserva");
                 System.out.println("0. Salir de la aplicacion");
 
@@ -237,9 +298,16 @@ public class App
 
 
 
+    public void mostrarMenu_A_G()
+	
+    {
+        
+
+    }
 
 
-    public void mostrarMenu_A()
+
+    public void mostrarMenu_A_L()
 	
     {
         
@@ -258,7 +326,12 @@ public class App
     public void mostrarMenu_C()
 	
     {
+        System.out.println("\n INFORMACION IMPORTANTE PARA LA RESERVA Y ALQUILER DE VEHICULOS\n");
         
+        System.out.println("2. Ingresar al sistema");
+        System.out.println("3. Mostrar el menu");
+        System.out.println("4. Realizar una Reserva");
+        System.out.println("5. Confirmar la reserva y guardar la factura");
 
     }
 
