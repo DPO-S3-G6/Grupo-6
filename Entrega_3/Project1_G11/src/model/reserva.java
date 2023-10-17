@@ -24,7 +24,7 @@ public class reserva {
         return 0;
     }
 
-    public int getCostoAdd(){
+    public int CostoAdd(){
         return 0;
     }
 
